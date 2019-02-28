@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.pipeline import Pipeline
+from sklearn.externals import joblib
 from transforms import *
-
 
 import os
 
@@ -26,11 +26,11 @@ tf_scaler = FeatureScaling()
 df = tf_scaler.fit_transform(df)
 
 
-pipeline = Pipeline([('cleaner', tf_cleaner()),
-                     ('remover', tf_scaler()),
-                     ('scaler', FeatureScaling()),
-                     ('merger', MergeFeatures()),
-                     ('selector', FeatureSelection()),
-                     ('droper', DropNaN())])
+pipeline = Pipeline([('cleaner', tf_cleaner),
+                     ('selector', tf_selector),
+                     ('scaler', tf_scaler),
+                    ])
+
+joblib.dump
 
 print(df.head())
