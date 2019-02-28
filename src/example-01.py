@@ -25,12 +25,9 @@ df = tf_selector.fit_transform(df)
 tf_scaler = FeatureScaling()
 df = tf_scaler.fit_transform(df)
 
-
 pipeline = Pipeline([('cleaner', tf_cleaner),
                      ('selector', tf_selector),
                      ('scaler', tf_scaler),
                     ])
-
-joblib.dump
 
 print(df.head())
