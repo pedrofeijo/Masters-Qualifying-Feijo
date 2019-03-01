@@ -11,7 +11,7 @@ Clone the full repo and pay attention for the if the data folder follows the str
     │   └── raw             - Raw csv files of each class
 
 
-1. Setup the environment:
+1. Navigate to [src](src/) and setup the environment:
 
 ```shell
 virtualenv -p python3.6 .env
@@ -19,7 +19,7 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Navigate to [src](src/) and run the following scripts
+2. Run the following script
 
 - `python test_clf.py` to print all metrics from the classifiers.
 
