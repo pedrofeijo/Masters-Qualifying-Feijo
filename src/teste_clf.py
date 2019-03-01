@@ -44,13 +44,13 @@ def print_metrics(y_true, y_hat):
    pass   
 
 for feature_set in DATA.keys():
-   # logging.info('Feature set: {}'.format(feature_set))
+   logging.info('Feature set: {}'.format(feature_set))
    data = pd.read_csv(os.path.join(DATA_FOLDER, DATA[feature_set]) + '.csv')
    labels = pd.read_csv(os.path.join(DATA_FOLDER, LABELS[feature_set]) + '.csv')
    pipeline = joblib.load(os.path.join(MODELS_FOLDER, PIPELINE_BASE_NAME + '_{}.pkl'.format(feature_set)))
 
    features = pipeline.transform(data)
-   logging.info(features.head())
+   # logging.info(features.head())
 
    X_test = features.values
    y_test = labels.values.reshape(-1)
