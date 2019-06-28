@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 2. Run the following script
 
-- `python test_clf.py` to print all metrics from the classifiers.
+- `python teste_clf.py` to print all metrics from the classifiers.
 
 
 
